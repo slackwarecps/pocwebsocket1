@@ -1,13 +1,13 @@
-package br.com.fabioalvaro.pocwebsocket1;
+package com.alibou.websocket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Pocwebsocket1Application {
+public class ChatApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Pocwebsocket1Application.class, args);
+		SpringApplication.run(ChatApplication.class, args);
 	}
 
 }
