@@ -5,7 +5,9 @@ $ pip install websockets-cli
 $ ws install-completion
 
 
+gs-guide-websocket
 
+/topic/app
 
   A convenient websocket cli.
 
@@ -13,6 +15,8 @@ $ ws install-completion
 
   # listens incoming messages from endpoint ws://localhost:8000/path
   $ ws listen ws://localhost:8000/path
+
+   $ ws listen ws://localhost:8000/gs-guide-websocket
 
   # sends text "hello world" in a text frame
   $ ws text wss://ws.postman-echo.com/raw "hello world"
