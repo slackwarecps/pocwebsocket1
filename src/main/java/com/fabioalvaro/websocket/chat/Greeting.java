@@ -7,8 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class Greeting {
-
-    private String content;
+  private String timestamp;
+  private String content;
   
    
   

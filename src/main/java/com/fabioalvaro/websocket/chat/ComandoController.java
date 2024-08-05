@@ -1,5 +1,8 @@
 package com.fabioalvaro.websocket.chat;
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +21,9 @@ public class ComandoController {
     @PostMapping("/send")
     public void sendGreeting(@RequestBody HelloMessage message) {
 
-        Greeting greeting =  new Greeting("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
+        String timestamp = ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+        
+        Greeting greeting =  new Greeting(timestamp,"Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
 
         template.convertAndSend("/topic/greetings", greeting);
        

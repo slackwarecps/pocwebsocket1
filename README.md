@@ -1,5 +1,13 @@
 # Spring boot chat application
 
+# TOOL
+$ brew install websocat
+
+https://github.com/vi/websocat
+
+websocat ws://192.168.1.104:8080/gs-guide-websocket -t /topic/greetings
+websocat ws://192.168.1.104:8080/gs-guide-websocket -t /topic/greetings  
+
 ## tools
 $ pip install websockets-cli
 $ ws install-completion

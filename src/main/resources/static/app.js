@@ -6,6 +6,7 @@ stompClient.onConnect = (frame) => {
     setConnected(true);
     console.log('Connected: ' + frame);
     stompClient.subscribe('/topic/greetings', (greeting) => {
+        console.log('Received: ' + greeting.body);
         showGreeting(JSON.parse(greeting.body).content);
     });
 };
@@ -49,6 +50,12 @@ function sendName() {
 }
 
 function showGreeting(message) {
+   
+    $("#greetings").append("<tr><td>Content:" + message + "</td></tr>");
+
+}
+
+function showGreeting2(message) {
     $("#greetings").append("<tr><td>" + message + "</td></tr>");
     console.log(message);
 }
